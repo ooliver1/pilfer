@@ -38,7 +38,7 @@ jobs:
       - name: Get Variables (Windows)
         run: |
           echo "$env:GITHUB_ENV"
-          echo ("TAG=" + $env:GITHUB_REF.replace('refs/heads/', '')) >> $env:GITHUB_ENV
+          echo ("TAG=" + $env:GITHUB_REF.replace('refs/tags/', '')) >> $env:GITHUB_ENV
           echo "PATH=pilfer.exe" >> $env:GITHUB_ENV
           echo "OS=Windows" >> $env:GITHUB_ENV
         if: matrix.os == 'windows-latest'
