@@ -8,7 +8,7 @@ on:
       - published
 
 concurrency:
-  group: ${{ github.ref }}
+  group: ${{ github.ref }}-${{ github.event_name == 'release' }}
   cancel-in-progress: true
 
 jobs:
